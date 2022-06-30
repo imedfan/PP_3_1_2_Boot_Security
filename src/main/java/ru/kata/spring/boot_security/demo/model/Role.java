@@ -18,7 +18,7 @@ public class Role implements GrantedAuthority{
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "roleId", nullable = false)
     private Long roleId;
 
@@ -26,7 +26,7 @@ public class Role implements GrantedAuthority{
     private String roleName;
 
     @Transient
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "role")
     private Set<User> users;
 
     public Long getRoleId() {

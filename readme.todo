@@ -1,5 +1,7 @@
 Задачи: 
   @Help https://github.com/fabiospampinato/vscode-todo-plus
+  @youtube https://youtu.be/iivY8B5A0Tk?t=1496
+
   ✔ Перенесите классы и зависимости из предыдущей задачи. @done(22-06-29 20:45) @5m
   
   ✔ Создайте класс Role и свяжите User с ролями так, чтобы юзер мог иметь несколько ролей @started(22-06-29 20:57) @done(22-06-29 21:50) @lasted(53m4s)

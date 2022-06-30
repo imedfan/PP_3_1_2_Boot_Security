@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class User implements UserDetails{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(
         name = "userId", 
         nullable = false
@@ -28,11 +28,8 @@ public class User implements UserDetails{
     @Column(name = "password")
     private String password;
 
-    @ManyToMany(
-        fetch = FetchType.EAGER, 
-        cascade = CascadeType.MERGE
-    )
-    @JoinColumn(
+    @ManyToMany
+    @JoinTable(
         name = "userRole", 
         joinColumns = @JoinColumn(name = "userId"), 
         inverseJoinColumns = @JoinColumn(name = "roleId")
