@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -38,19 +39,29 @@ public class User implements UserDetails {
     )
 
     @Column(name = "roles")
-    private Set<Role> roles;
+    private Set<Role> roles = new HashSet<>();
+
+    public void addRole(Role role) {
+        roles.add(role);
+    }
 
     public User() {
     }
 
-    public User(int id, String name, int age, String car, String username, String password, Set<Role> roles) {
-        this.id = id;
+    public User(String name, int age, String car, String username, String password, Set<Role> roles) {
         this.name = name;
         this.age = age;
         this.car = car;
         this.username = username;
         this.password = password;
         this.roles = roles;
+    }
+    public User(String name, int age, String car, String username, String password) {
+        this.name = name;
+        this.age = age;
+        this.car = car;
+        this.username = username;
+        this.password = password;
     }
 
     

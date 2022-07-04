@@ -8,4 +8,7 @@ public interface RoleDao {
     Set<Role> getAllRoles();
 
     Set<Role> getByName(String name);
+
+    void saveRole(Role role);
 }
+

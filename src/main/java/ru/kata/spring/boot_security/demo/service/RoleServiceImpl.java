@@ -22,4 +22,9 @@ public class RoleServiceImpl implements RoleService {
     public Set<Role> getByName(String name) {
         return roleDao.getByName(name);
     }
+
+    @Override
+    public void saveRole(Role role) {
+        roleDao.saveRole(role);
+    }
 }

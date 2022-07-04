@@ -69,4 +69,6 @@ public class UserServiceImpl implements UserService {
         user.getAuthorities().size();
         return user;
     }
+
+
 }

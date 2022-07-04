@@ -54,4 +54,5 @@ public class UserDaoImpl implements UserDao {
         query.setParameter("username", username);
         return (User) query.getSingleResult();
     }
+
 }

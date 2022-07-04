@@ -2,6 +2,7 @@ TRUNCATE TABLE kata.users;
 TRUNCATE TABLE kata.role;
 TRUNCATE TABLE kata.users_roles;
 
+/*
 
 INSERT INTO kata.users (name, car, age, username, password)
 VALUES
@@ -17,3 +18,6 @@ INSERT INTO kata.users_roles (roles_id, user_id)
 VALUES
 	(2,1),
     (1,2);
+
+
+*/
