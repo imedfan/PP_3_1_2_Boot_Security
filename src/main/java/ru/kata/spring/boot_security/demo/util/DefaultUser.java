@@ -1,9 +1,9 @@
-package ru.kata.spring.boot_security.demo.util;
+/* package ru.kata.spring.boot_security.demo.util;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import org.springframework.stereotype.Component;
 
 import ru.kata.spring.boot_security.demo.service.RoleService;
@@ -51,4 +51,4 @@ public class DefaultUser {
     }
 
 
-}
+} */
