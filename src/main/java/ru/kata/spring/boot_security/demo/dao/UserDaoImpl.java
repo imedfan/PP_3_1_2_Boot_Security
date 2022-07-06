@@ -31,6 +31,12 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void update(User user, int id) {
+        entityManager.merge(user);
+    }
+
+    /* 
+    @Override
+    public void update(User user, int id) {
         System.out.println(user.toString());
         entityManager.createQuery("update User set name = :name, age = :age, car = :car, username = :username, password = :password where id = :id")
         .setParameter("name", user.getName())
@@ -41,6 +47,7 @@ public class UserDaoImpl implements UserDao {
         .setParameter("id", user.getId())
         .executeUpdate();
     }
+    */
 
     @Override
     public void delete(int id) {

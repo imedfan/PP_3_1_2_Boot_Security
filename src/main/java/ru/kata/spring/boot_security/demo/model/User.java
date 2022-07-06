@@ -39,11 +39,7 @@ public class User implements UserDetails {
     )
 
     @Column(name = "roles")
-    private Set<Role> roles = new HashSet<>();
-
-    public void addRole(Role role) {
-        roles.add(role);
-    }
+    private Set<Role> roles;
 
     public User() {
     }

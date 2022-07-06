@@ -9,16 +9,21 @@ import ru.kata.spring.boot_security.demo.service.UserService;
 import java.security.Principal;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping()
 public class UserController {
 
     @Autowired
     private UserService userService;
 
    
-    @GetMapping()
+    @GetMapping("/user")
     public String showUser(Principal principal, Model model) {
         model.addAttribute("user", userService.getUserByName(principal.getName()));
-        return "showForUser";
+        return "user";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
     }
 }
