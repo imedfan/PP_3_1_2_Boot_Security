@@ -29,4 +29,9 @@ public class RoleDaoImpl implements RoleDao {
         query.setParameter("name", name);
         return query.getResultStream().collect(Collectors.toSet());
     }
+
+    @Override
+    public void saveRole(Role role) {
+        entityManager.persist(role);
+    }
 }

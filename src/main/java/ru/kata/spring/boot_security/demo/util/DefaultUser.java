@@ -40,6 +40,7 @@ public class DefaultUser {
         User user2 = new User();
         user2.setName("Julia");
         user2.setCar("Volvo");
+        user2.setAge(28);
         user2.setUsername("user");
         user2.setPassword("user");
         user2.addRole(role2);
